@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppFactorizar
+namespace ConsoleApp4
 {
     class Program
     {
@@ -27,34 +27,32 @@ namespace AppFactorizar
 
             Console.ReadLine();
 
-            d = b * b - 4 * a * c;               //Si el discriminante es negativo, no hay soluciones
+            d = b * b - 4 * a * c;               
 
             if (d < 0)
             {
-                Console.ReadLine("La ecuacion no es valida");
+                Console.WriteLine("La ecuacion no es valida");
 
             }
             else
             {
-                if(d == 0)
+                if (d == 0)
                 {
-                    x1 = (-b + Math.Sqrt(d)) / (2 * a);
+                    x = -b / 2 * a;
 
-                    x2 = (-b - Math.Sqrt(d)) / (2 * a);
-
-                    Console.ReadLine("" + x);
+                    Console.WriteLine("La ecuacion tiene una unica solucion" + x);
                 }
                 else
                 {
-                    x1 = (-b - (d * )) / (2 * a);
+                    x1 = (-b + Math.Sqrt(d)) / 2 * a;
 
-                    x2 = (-b + (d* )) / (2 * a);
+                    x2 = (-b + Math.Sqrt(d)) / 2 * a;
 
-                    Console.ReadLine("X1:" + x1);
+                    Console.WriteLine("X1:" + x1);
 
                     Console.ReadLine();
 
-                    Console.ReadLine("X2:" + x2);
+                    Console.WriteLine("X2:" + x2);
                 }
             }
         }
